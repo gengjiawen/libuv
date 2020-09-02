@@ -19,7 +19,9 @@ jobs:
 
   build-cross-qemu:
     runs-on: ubuntu-latest
-    container: gengjiawen/libuv
+    container: 
+     image: gengjiawen/libuv
+     options: --user 1001
     name: build-cross-qemu-${{ matrix.config.target }}
 
     strategy:
