@@ -58,5 +58,4 @@ jobs:
           ls -lh
       - name: Test
         run: |
-          su user
-          ${{ matrix.config.qemu }} build/uv_run_tests_a
+          su user && whoami && {{ matrix.config.qemu }} build/uv_run_tests_a
